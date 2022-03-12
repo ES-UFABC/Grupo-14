@@ -2,7 +2,6 @@
 
 1. Carlos Gabriel dos Anjos Quintino
 1. Leandro Diomar Gomes da Silva
-1. Kayque Gonçalves
 1. Hugo Ogawa
 1. Frederico Bach
 
