@@ -3,7 +3,7 @@
 1. Carlos Gabriel dos Anjos Quintino
 1. Leandro Diomar Gomes da Silva
 1. Hugo Ogawa
-1. Frederico Bach
+
 
 Desenvolver um software que agilize a triagem baseada na distância do paciente para o hospital, já disponibilizar uma senha assim acelerando o atendimento do mesmo e enviando para o hospital um prontuário do paciente e o tempo estimado para o paciente chegar ao hospital.
 
