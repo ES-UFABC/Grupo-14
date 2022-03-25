@@ -14,6 +14,7 @@ public class TriAppApplication {
 		return "Application Started";
 	}
 	
+	
 	public static void main(String[] args) {
 		SpringApplication.run(TriAppApplication.class, args);
 	}
