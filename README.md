@@ -9,6 +9,6 @@ Desenvolver um software que agilize a triagem baseada na distância do paciente 
 
 # Tecnologias
 
-React Native
-Spring boot
+1. React Native
+1. Spring boot
 
