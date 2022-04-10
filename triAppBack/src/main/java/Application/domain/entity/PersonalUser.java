@@ -19,9 +19,13 @@ public class PersonalUser extends User{
     @Column(length = 14)
     private String cpf;
 
-    @NotNull
+    @NotEmpty
     @Column(length = 2)
-    private Integer age;
+    private String age;
+
+    @NotEmpty
+    @Column(length = 2)
+    private String susCard;
 
     @NotEmpty
     @Column(length = 100)

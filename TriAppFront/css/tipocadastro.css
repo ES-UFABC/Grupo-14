@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDPMincho&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'BIZ UDPMincho';
+	background-color: #ADD8E6;
+
+}
+.box{
+	width: 400px;
+	height: 400px;
+	background-color: #87CEEB;
+	margin: 0 auto;
+	align-items: center;
+	border-radius: 20px;
+}
+.texto{
+	font-size: 90;
+}
