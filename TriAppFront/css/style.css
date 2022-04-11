@@ -22,8 +22,8 @@ body{
 .content{
 	background-color: #fff;
 	border-radius: 15px;
-	width: 960px;
-	height: 50%;
+	width: 90%;
+	height: 60%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -42,7 +42,7 @@ body{
 	display: flex;
 }
 .title{
-	font-size: 28px;
+	font-size: 30px;
 	font-weight: bold;
 	text-transform: capitalize;
 }
@@ -50,7 +50,7 @@ body{
 	color: #87CEFA;
 }
 .description{
-	font-size: 14px;
+	font-size: 17px;
 	font-weight: 300;
 	color: #87CEFA;
 	line-height: 30px;
@@ -59,7 +59,7 @@ body{
 	border-radius: 15px;
 	text-transform: uppercase;
 	color:#87CEFA ;
-	font-size: 10px;
+	font-size: 12px;
 	padding: 10px 50px;
 	cursor: pointer;
 	font-weight: hold;
