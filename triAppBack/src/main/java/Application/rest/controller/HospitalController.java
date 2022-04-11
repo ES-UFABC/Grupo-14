@@ -21,6 +21,7 @@ public class HospitalController {
         this.repository = repository;
     }
 
+
     @PostMapping()
     @ResponseStatus(HttpStatus.CREATED)
     public HospitalUser save(@RequestBody  HospitalUser user){

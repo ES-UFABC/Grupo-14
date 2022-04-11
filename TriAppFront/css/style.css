@@ -49,6 +49,11 @@ body{
 .title-bem{
 	color: #87CEFA;
 }
+
+.title-cadastro{
+	margin-bottom: 15px;
+}
+
 .description{
 	font-size: 17px;
 	font-weight: 300;

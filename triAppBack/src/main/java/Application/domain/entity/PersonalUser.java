@@ -4,27 +4,51 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 @Entity
 @Table
-@Data
-public class PersonalUser extends User{
+public class PersonalUser {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @NotEmpty
+    @Column(length = 100)
+    private String name;
+
+    @NotEmpty
+    @Column(length = 100)
+    private String email;
+
+    @NotEmpty
+    @Column(length = 100)
+    private String password;
+
+    @NotEmpty
+    @Column(length = 11)
+    private String phone;
+
+    @NotEmpty
+    @Column(length = 9)
+    private String cep = "";
 
     @NotEmpty
     @Column(length = 14)
     private String cpf;
 
-    @NotEmpty
+    @NotNull
     @Column(length = 2)
-    private String age;
+    private Integer age;
 
     @NotEmpty
-    @Column(length = 2)
+    @Column(length = 15)
     private String susCard;
 
     @NotEmpty

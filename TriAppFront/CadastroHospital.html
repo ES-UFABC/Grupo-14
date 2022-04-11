@@ -5,11 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro</title>
 	<link rel="stylesheet" href="./css/style_cadastro.css">
+	<script src="js/conectApiHospitais.js"></script>
 </head>
 <body>
 	<div id="main-container">
 		<h1>Cadastre-se</h1>
-		<form id= "registro" action="" method="">
+		<form id= "registro" onsubmit="cadastrarHospital()" >
 			<div class="full-box">
 				<label for="email">E-mail</label>
 				<input type="email" name="email" id="email" placeholder="E-mail">
@@ -23,16 +24,20 @@
 				<input type="text" name="cnpj" id= "cnpj" placeholder="CNPJ">
 			</div>
 			<div class="full-box">
-				<label for="endereco">Endereço</label>
-				<input type="text" name="endereco" id= "endereco" placeholder="Endereço completo do Hospital">
+				<label for="endereco">Cep</label>
+				<input type="text" name="cep" id= "cep" placeholder="Endereço completo do Hospital">
+			</div>
+			<div class="full-box">
+				<label for="endereco">Telefone</label>
+				<input type="text" name="phone" id= "phone" placeholder="Telefone do Hospital">
 			</div>
 			<div class="full-box">
 				<label for="senha">Digite sua senha</label>
-				<input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+				<input type="password" name="password" id="password" placeholder="Digite sua senha">
 			</div>
 			<div class="full-box">
 				<label for="senha">Confirme sua senha</label>
-				<input type="password" name="confSenha" id="confSenha" placeholder="Digite sua senha">
+				<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Digite sua senha">
 			</div>
 			<div class="full-box">
 				<input type="submit" id="btn-submit" value="Registrar">
