@@ -4,7 +4,8 @@ class Validator{
 
 		]
 	}
-	validate(form){
+
+	async function validate(form){
 		let inputs = form.getElementByTagName('input');
 		let inputsArray = [...inputs];
 		inputsArray.forEach(function(input){
@@ -13,12 +14,11 @@ class Validator{
 		});
 	}
 }
-
 let form = document.getElementById('registro');
 let submit = document.getElementById('btn-submit');
 let validator = new Validator();
 submit.addEventListener('click', function(e){
 	
-	e.preventDefautl();
+	e.preventDefault();
 	Validator.validate(form);
 });

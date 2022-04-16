@@ -46,6 +46,18 @@
 		</form>
 	</div>
 	<p class="error-validation"></p>
-	<script src="js/cadastro.js"></script>
+	
 </body>
+<script >
+	async function getContent() {
+		try{
+			const response = await fetch('http://localhost:8080/')
+
+		}catch(error){
+			console.error(error)
+		}
+		
+	}
+	getContent()
+</script>
 </html>

@@ -22,12 +22,13 @@ function cadastrarHospital(){
   let confirmPassword = document.getElementById("confirmPassword").value;
 
   body = {
+    "email": email,
     "name": name,
     "cnpj": cnpj,
-    "email": email,
+    "cep": cep,
     "password": password,
     "phone": phone,
-    "cep": cep
+    
   } 
 
   if (password == confirmPassword ) {
