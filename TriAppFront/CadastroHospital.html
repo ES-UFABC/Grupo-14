@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Cadastro</title>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+	<script src="js/main.js"></script>
 	<link rel="stylesheet" href="./css/style_cadastro.css">
 	<script src="js/conectApiHospitais.js"></script>
 </head>
@@ -48,16 +50,6 @@
 	<p class="error-validation"></p>
 	
 </body>
-<script >
-	async function getContent() {
-		try{
-			const response = await fetch('http://localhost:8080/')
 
-		}catch(error){
-			console.error(error)
-		}
-		
-	}
-	getContent()
-</script>
+<!-- <script src="js/cadastro.js"></script> -->
 </html>

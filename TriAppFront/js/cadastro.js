@@ -1,11 +1,10 @@
-class Validator{
-	constructor(){
-		this.validations = [
 
-		]
+class Validator{
+	constructor(form){
+		this.form = form;
 	}
 
-	async function validate(form){
+	validate(){
 		let inputs = form.getElementByTagName('input');
 		let inputsArray = [...inputs];
 		inputsArray.forEach(function(input){
@@ -14,11 +13,13 @@ class Validator{
 		});
 	}
 }
+
+
 let form = document.getElementById('registro');
 let submit = document.getElementById('btn-submit');
-let validator = new Validator();
+let validator = new Validator(form);
 submit.addEventListener('click', function(e){
 	
 	e.preventDefault();
-	Validator.validate(form);
+	validator.validate;
 });

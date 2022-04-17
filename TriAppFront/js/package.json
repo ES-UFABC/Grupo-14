@@ -1,0 +1,27 @@
+{
+  "name": "grupo-14",
+  "version": "1.0.0",
+  "description": "1. Carlos Gabriel dos Anjos Quintino\r 1. Leandro Diomar Gomes da Silva\r 1. Hugo Ogawa",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ES-UFABC/Grupo-14.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ES-UFABC/Grupo-14/issues"
+  },
+  "homepage": "https://github.com/ES-UFABC/Grupo-14#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15",
+    "validate.js": "^0.13.1"
+  }
+}

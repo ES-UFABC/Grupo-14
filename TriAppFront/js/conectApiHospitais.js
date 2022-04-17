@@ -1,3 +1,4 @@
+
 function fazPost(url, body) {
   console.log(body)
   let request = XMLHttpRequest()
@@ -32,8 +33,13 @@ function cadastrarHospital(){
   } 
 
   if (password == confirmPassword ) {
-
-    fazPost(url, body);
+    if (password.length >= 6){
+      fazPost(url, body);
+      
+    }else{
+      alert("Sua senha precisa ter no mínimo 6 caracteres");
+    }
+    
   } else{
     alert("Senhas incompativeis, tente novamente");
   }
