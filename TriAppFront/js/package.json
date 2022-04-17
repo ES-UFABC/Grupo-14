@@ -4,7 +4,7 @@
   "description": "1. Carlos Gabriel dos Anjos Quintino\r 1. Leandro Diomar Gomes da Silva\r 1. Hugo Ogawa",
   "main": "index.js",
   "scripts": {
-  "start": "nodemon server.js"
+  "start": "nodemon conectApiHospitais.js"
   },
   "repository": {
     "type": "git",

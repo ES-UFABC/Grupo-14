@@ -1,15 +1,8 @@
+//import axios from node_modules/axios
+//const axios = import('node_modules/axios')
 
 function fazPost(url, body) {
-  console.log(body)
-  let request = XMLHttpRequest()
-  request.open("POST", url, true)
-  request.setRequestHeader("Content-type", "application/json")
-  request.send(body)
-
-  request.onload = function(){
-    console.log(this.responseText)
-  }
-  return request.responseText
+  axios.post(url,body)
 }
 
 function cadastrarHospital(){
@@ -34,8 +27,8 @@ function cadastrarHospital(){
 
   if (password == confirmPassword ) {
     if (password.length >= 6){
-      fazPost(url, body);
-      
+      //fazPost(url, body);
+      console.log({body});
     }else{
       alert("Sua senha precisa ter no mínimo 6 caracteres");
     }
