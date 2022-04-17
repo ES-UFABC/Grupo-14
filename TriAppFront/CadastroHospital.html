@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Cadastro</title>
+	<link rel="stylesheet" href="./css/style_cadastro.css">
+	<script src="js/conectApiHospitais.js"></script>
+</head>
+<body>
+	<div id="main-container">
+		<h1>Cadastre-se</h1>
+		<form id= "registro" onsubmit="cadastrarHospital()" >
+			<div class="full-box">
+				<label for="email">E-mail</label>
+				<input type="email" name="email" id="email" placeholder="E-mail">
+			</div>
+			<div class="full-box">
+				<label for="name">Nome</label>
+				<input type="text" name="name" id="name" placeholder="Nome do Hospital">
+			</div>
+			<div class="full-box">
+				<label for="cnpj">CNPJ</label>
+				<input type="text" name="cnpj" id= "cnpj" placeholder="CNPJ">
+			</div>
+			<div class="full-box">
+				<label for="endereco">Cep</label>
+				<input type="text" name="cep" id= "cep" placeholder="Endereço completo do Hospital">
+			</div>
+			<div class="full-box">
+				<label for="endereco">Telefone</label>
+				<input type="text" name="phone" id= "phone" placeholder="Telefone do Hospital">
+			</div>
+			<div class="full-box">
+				<label for="senha">Digite sua senha</label>
+				<input type="password" name="password" id="password" placeholder="Digite sua senha">
+			</div>
+			<div class="full-box">
+				<label for="senha">Confirme sua senha</label>
+				<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Digite sua senha">
+			</div>
+			<div class="full-box">
+				<input type="submit" id="btn-submit" value="Registrar">
+			</div>
+
+		</form>
+	</div>
+	<p class="error-validation"></p>
+	
+</body>
+<script >
+	async function getContent() {
+		try{
+			const response = await fetch('http://localhost:8080/')
+
+		}catch(error){
+			console.error(error)
+		}
+		
+	}
+	getContent()
+</script>
+</html>
