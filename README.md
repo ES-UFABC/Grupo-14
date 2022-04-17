@@ -7,3 +7,8 @@
 
 Desenvolver um software que agilize a triagem baseada na distância do paciente para o hospital, já disponibilizar uma senha assim acelerando o atendimento do mesmo e enviando para o hospital um prontuário do paciente e o tempo estimado para o paciente chegar ao hospital.
 
+# Tecnologias
+
+1. Front em HTML, CSS e javascript
+1. Spring boot
+
