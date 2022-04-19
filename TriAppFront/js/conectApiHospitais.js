@@ -1,12 +1,12 @@
-//import axios from node_modules/axios
-//const axios = import('node_modules/axios')
-
+const cors = require('cors')
+const express = require('express')
+const app = express()
 function fazPost(url, body) {
-  axios.post(url,body)
+  axios.body({body});
 }
 
 function cadastrarHospital(){
-  let url = "http://localhost:8080/api/users/hospitais"
+  let url = "http://localhost:8080"
   let email = document.getElementById("email").value;
   let name  = document.getElementById("name").value;
   let cnpj = document.getElementById("cnpj").value;
@@ -27,9 +27,8 @@ function cadastrarHospital(){
 
   if (password == confirmPassword ) {
     if (password.length >= 6){
-      //fazPost(url, body);
-      console.log({body});
-    }else{
+      fazPost(url, {body});
+          }else{
       alert("Sua senha precisa ter no mínimo 6 caracteres");
     }
     
@@ -37,3 +36,4 @@ function cadastrarHospital(){
     alert("Senhas incompativeis, tente novamente");
   }
 }
+app.listen('8080')

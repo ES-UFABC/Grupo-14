@@ -1,14 +1,5 @@
 function fazPost(url, body) {
-  console.log(body)
-  let request = XMLHttpRequest()
-  request.open("POST", url, true)
-  request.setRequestHeader("Content-type", "application/json")
-  request.send(body)
-
-  request.onload = function(){
-    console.log(this.responseText)
-  }
-  return request.responseText
+  console.log({body})
 }
 
 function cadastrarPaciente(){
@@ -21,7 +12,7 @@ function cadastrarPaciente(){
   let phone = document.getElementById("phone").value;
   let endereco = document.getElementById("endereco").value;
   let senha = document.getElementById("senha").value;
-  let confirmPassword = document.getElementById("confirmSenha").value;
+  let confSenha = document.getElementById("confirmSenha").value;
 
   body = {
     "email": email,

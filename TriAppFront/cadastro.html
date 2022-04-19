@@ -3,14 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cadastro</title>
-	<link rel="stylesheet" href="./css/style_cadastro.css">
+	<title>Cadastro Pacientes</title>
 	<script src="js/conectApiPaciente.js"></script>
+	<link rel="stylesheet" href="./css/style_cadastro.css">
 </head>
 <body>
 	<div id="main-container">
 		<h1>Cadastre-se</h1>
-		<form id= "registro" action="" method="">
+		<form id= "registro" onsubmit="cadastrarPaciente()">
 			<div class="full-box">
 				<label for="email">E-mail</label>
 				<input type="email" name="email" id="email" placeholder="E-mail">
@@ -26,10 +26,6 @@
 			<div class="full-box">
 				<label for="cpf">CPF</label>
 				<input type="text" name="cpf" id= "cpf" placeholder="Digite seu cpf">
-			</div>
-			<div class="full-box">
-				<label for="cartao">Cartão SUS</label>
-				<input type="text" name="sus" id="rg" placeholder="Número do cartão do sus">
 			</div>
 			<div class="full-box">
 				<label for="phone">Telefone</label>
