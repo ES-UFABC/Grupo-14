@@ -1,9 +1,8 @@
-const cors = require('cors')
-const express = require('express')
-const app = express()
-function fazPost(url, body) {
-  axios.body({body});
-}
+
+function fazPost(url, body){
+  //postar
+  }
+
 
 function cadastrarHospital(){
   let url = "http://localhost:8080"
@@ -15,15 +14,16 @@ function cadastrarHospital(){
   let password = document.getElementById("password").value;
   let confirmPassword = document.getElementById("confirmPassword").value;
 
-  body = {
+   body = {
     "email": email,
     "name": name,
     "cnpj": cnpj,
     "cep": cep,
-    "password": password,
     "phone": phone,
-    
+    "password": password,
+    "confirmPassword": confirmPassword,
   } 
+  
 
   if (password == confirmPassword ) {
     if (password.length >= 6){
@@ -36,4 +36,3 @@ function cadastrarHospital(){
     alert("Senhas incompativeis, tente novamente");
   }
 }
-app.listen('8080')
