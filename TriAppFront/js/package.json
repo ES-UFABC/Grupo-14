@@ -1,0 +1,19 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "1. Carlos Gabriel dos Anjos Quintino\r 1. Leandro Diomar Gomes da Silva\r 1. Hugo Ogawa",
+  "main": "conectApiHospitais.js",
+  "scripts": {
+  "start": "nodemon conectApiHospitais.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "nodemon": "^2.0.15"
+  }
+}
