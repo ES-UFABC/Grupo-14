@@ -10,44 +10,59 @@
 <body>
 	<div id="main-container">
 		<h1>Cadastre-se</h1>
-		<form id= "registro" onsubmit="cadastrarPaciente()">
-			<div class="full-box">
-				<label for="email">E-mail</label>
-				<input type="email" name="email" id="email" placeholder="E-mail">
-			</div>
+		<form id= "registro" >
 			<div class="full-box">
 				<label for="name">Nome</label>
 				<input type="text" name="name" id="name" placeholder="Nome Completo">
-			</div>
-			<div class="full-box">
-				<label for="rg">RG</label>
-				<input type="text" name="rg" id= "rg" placeholder="Substituir X por 0">
 			</div>
 			<div class="full-box">
 				<label for="cpf">CPF</label>
 				<input type="text" name="cpf" id= "cpf" placeholder="Digite seu cpf">
 			</div>
 			<div class="full-box">
+				<label for="email">E-mail</label>
+				<input type="email" name="email" id="email" placeholder="E-mail">
+			</div>
+			<div class="full-box">
 				<label for="phone">Telefone</label>
 				<input type="text" name="phone" id="phone" placeholder="Número do cartão do sus">
 			</div>
 			<div class="full-box">
-				<label for="endereco">Endereço</label>
-				<input type="text" name="endereco" id= "endereco" placeholder="Endereço completo">
+				<label for="cep">Cep</label>
+				<input type="text" name="cep" id= "cep" placeholder="Insira o cep">
 			</div>
 			<div class="full-box">
-				<label for="senha">Digite sua senha</label>
-				<input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+				<label for="age">Idade</label>
+				<input type="text" name="age" id= "age" placeholder="Insira sua Idade">
+			</div>
+			<div class="full-box">
+				<label for="sus">Cartão do SUS</label>
+				<input type="text" name="sus" id= "sus" placeholder="Nr. Cartão">
+			</div>
+			<div class="full-box">
+				<label for="maritalStatus">Estado Civil</label>
+				<input type= name="maritalStatus" id= "maritalStatus" placeholder="Estado Civil"  list="status">
+					<datalist id="status">
+						<option value="">Estado Civil</option>
+						<option value="Casado">Casado/a</option>
+						<option value="União estavel">União estavel</option>
+						<option value="Solteiro">Solteiro/a</option>
+						<option value="Viuvo/a">Viuvo/a</option>
+					</datalist>
+			</div>
+			<div class="full-box">
+				<label for="password">Digite sua senha</label>
+				<input type="password" name="password" id="password" placeholder="Digite sua senha">
 			</div>
 			<div class="full-box">
 				<label for="senha">Confirme sua senha</label>
-				<input type="password" name="confSenha" id="confSenha" placeholder="Digite sua senha">
+				<input type="password" name="confirmSenha" id="confirmSenha" placeholder="Digite sua senha">
 			</div>
-			<div class="full-box">
-				<input type="submit" id="btn-submit" value="Registrar">
-			</div>
-
+			
 		</form>
+		<div class="full-box">
+			<input type="button"  id="btn-submit" value="Registrar" onclick="cadastrarPaciente()">
+		</div>
 	</div>
 	<p class="error-validation"></p>
 	<!--<script src="js/cadastro.js"></script>-->

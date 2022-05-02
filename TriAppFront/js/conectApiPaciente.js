@@ -1,34 +1,45 @@
 function fazPost(url, body) {
-  console.log({body})
+  console.log("Body= ", body)
+  let request = new XMLHttpRequest()
+  request.open("POST", url, true)
+  request.setRequestHeader("Content-type", "application/json")
+  request.send(JSON.stringify(body))
+
+  request.onload = function() {
+    console.log(this.responseText)
+  }
+  
+  return request.responseText
 }
 
 function cadastrarPaciente(){
-  let url = "http://localhost:8080/api/users/pacientes"
-  let email = document.getElementById("email").value;
+  let url = "http://localhost:8080/api/users/pessoas"
   let name  = document.getElementById("name").value;
-  let rg = document.getElementById("rg").value;
   let cpf = document.getElementById("cpf").value;
-  let sus = document.getElementById("sus").value;
+  let age =  document.getElementById("age").value;
+  let email = document.getElementById("email").value;
+  let password = document.getElementById("password").value;
   let phone = document.getElementById("phone").value;
-  let endereco = document.getElementById("endereco").value;
-  let senha = document.getElementById("senha").value;
+  let cep = document.getElementById("cep").value;
+  let maritalStatus = document.getElementById("maritalStatus").value;
+  let sus = document.getElementById("sus").value;
   let confSenha = document.getElementById("confirmSenha").value;
 
   body = {
-    "email": email,
     "name": name,
-    "rg": rg,
     "cpf": cpf,
-    "sus": sus,
+    "email": email,
+    "password": password,
     "phone": phone,
-    "endereco": endereco,
-    "senha": senha,
-    "confSenha": confSenha,
+    "cep": cep,
+    "age":  parseInt(age), 
+    "maritalStatus" : maritalStatus,
+    "susCard": sus
     
   } 
 
-  if (senha == confSenha ) {
-    if (senha.length >= 6){
+  if (password == confSenha ) {
+    if (password.length >= 6){
       fazPost(url, body);
       
     }else{

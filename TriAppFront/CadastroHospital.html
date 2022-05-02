@@ -10,7 +10,7 @@
 <body>
 	<div id="main-container">
 		<h1>Cadastre-se</h1>
-		<form id= "registro" onsubmit="cadastrarHospital()" >
+		<form id= "registro"  >
 			<div class="full-box">
 				<label for="email">E-mail</label>
 				<input type="email" name="email" id="email" placeholder="E-mail">
@@ -39,11 +39,11 @@
 				<label for="senha">Confirme sua senha</label>
 				<input type="password" name="confirmPassword" id="confirmPassword" placeholder="Digite sua senha">
 			</div>
-			<div class="full-box">
-				<input type="button"  id="btn-submit" value="Registrar" onclick="cadastrarHospital()">
-			</div>
-
+			
 		</form>
+		<div class="full-box">
+			<input type="button"  id="btn-submit" value="Registrar" onclick="cadastrarHospital()">
+		</div>
 	</div>
 	<p class="error-validation"></p>
 	

@@ -8,3 +8,4 @@ btnentrar.addEventListener("click", function () {
 btncriar.addEventListener("click", function () {
 	body.className = "criar-js";
 });
+
