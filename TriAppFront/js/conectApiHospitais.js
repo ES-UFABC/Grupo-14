@@ -1,31 +1,20 @@
-const express = require('express')
-const cors = require('cors')
-const axios = require('./node_modules/axios')
-const app = express()
-
-app.listen(8080, () => console.log('Rodando na porta 8080'))
-
-app.use(cors())
-
-app.use(express.json())
-
-
 function fazPost(url, body){
-  const express = require('express')
-  const cors = require('cors')
-  const axios = require('./node_modules/axios')
-  const app = express()
+  console.log("Body= ", body)
+  let request = new XMLHttpRequest()
+  request.open("POST", url, true)
+  request.setRequestHeader("Content-type", "application/json")
+  request.send(JSON.stringify(body))
+
+  request.onload = function() {
+    console.log(this.responseText)
+  }
   
-  axios.post(url, body)
-  .then(response => {
-    console.log(response)
-  })
-  .catch(error => console.log(error))
+  return request.responseText
 }
 
 
 function cadastrarHospital(){
-  let url = "http://localhost:8080/users/hospitais"
+  let url = "http://localhost:8080/api/users/hospitais"
   let email = document.getElementById("email").value;
   let name  = document.getElementById("name").value;
   let cnpj = document.getElementById("cnpj").value;
@@ -35,13 +24,12 @@ function cadastrarHospital(){
   let confirmPassword = document.getElementById("confirmPassword").value;
 
    var body = {
-    "email": email,
     "name": name,
     "cnpj": cnpj,
-    "cep": cep,
-    "phone": phone,
+    "email": email,
     "password": password,
-    "confirmPassword": confirmPassword,
+    "phone": phone,
+    "cep": cep
   } 
   
 
@@ -56,11 +44,4 @@ function cadastrarHospital(){
   } else{
     alert("Senhas incompativeis, tente novamente");
   }
-}
-
-
-function newUser(){
-  app.get('/hospitais', function (req, res) {
-  res.send('running');
-  });
 }
