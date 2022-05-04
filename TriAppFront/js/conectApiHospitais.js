@@ -1,13 +1,23 @@
+function fazGet(url){
+  let request = new XMLHttpRequest()
+  request.open("GET", url, false)
+  request.send()
+  request.onload = function () {
+    console.log(this.responseText)
+  }
+  return request.responseText
+}
+
 function fazPost(url, body){
-  console.log("Body= ", body)
+  //console.log("Body= ", body)
   let request = new XMLHttpRequest()
   request.open("POST", url, true)
   request.setRequestHeader("Content-type", "application/json")
   request.send(JSON.stringify(body))
 
-  request.onload = function() {
+  /*request.onload = function() {
     console.log(this.responseText)
-  }
+  }*/
   
   return request.responseText
 }
@@ -35,8 +45,20 @@ function cadastrarHospital(){
 
   if (password == confirmPassword ) {
     if (password.length >= 6){
-      
-      fazPost(url,body)
+      data = fazGet(url)
+      usuarios = JSON.parse(data)
+      console.log(usuarios)
+      var verifica = 0;
+      for (var i = 0; i < Object.keys(usuarios).length; i++){
+        if( usuarios[i].email == email){
+          alert("email já cadastrado")
+          verifica = 1
+        }
+      }
+        if (verifica == 0){
+          fazPost(url,body)
+        }
+        
           }else{
       alert("Sua senha precisa ter no mínimo 6 caracteres");
     }
