@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="./css/style_cadastro.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Triagem de pacientes</title>
+</head>
+<body>
+	<div id="main-container">
+		<h1>Triagem</h1>
+		<form id= "triagem" >
+
+			<div class="full-box-textInput">
+				<label for="symptoms">Descreva os sintomas sentidos pelo paciente</label>
+				<input type="text" name="symptoms" id="symptoms" placeholder="sintomas"/>
+			</div>
+
+			<div class="full-box">
+				<label for="date">Quando começou os sintomas ?</label>
+				<input type="date" name="date" id= "date" placeholder="Selecione a data">
+			</div>
+
+			<div class="full-box">
+				<label for="temperature">Qual a temperatura corporal do paciente ?</label>
+				<input type="number" name="temperature" id="temperature" placeholder="Temperatura corporal, caso não saiba digite 0">
+			</div>
+
+			<div class="full-box">
+				<label for="high_pressure">Qual a pressão paciente ?</label>
+				<input type="text" name="high_pressure" id="high_pressure" placeholder="Digite a pressão separando por / por exemplo 12 por 8 12/8 ">
+			</div>
+
+			<div class="full-box">
+				<label for="medicine">Toma algum medicamento regularmente ?</label>
+				<input type="text" name="medicine" id= "medicine" placeholder="Caso não tome, não digite nada">
+			</div>
+
+			<div class="full-box">
+				<label for="alergic">Possui alguma alergia a medicamentos ?</label>
+				<input type="text" name="alergic" id= "alergic" placeholder="Caso tenha, escreva os medicamentos, caso não tenha não escreva nada">
+			</div>
+
+			<div class="full-box">
+				<label for="surgery">Paciente já passou por cirurgias ?</label>
+				<input type="text" name="surgery" id="surgery" placeholder="Descreva cirurgias já realizadas, caso não deixe em branco">
+			</div>
+
+			<div class="full-box">
+				<label for="hospital">Para qual hospital está se dirigindo ?</label>
+				<input type="text" name="hospital" id="hospital" placeholder="Escolha o hospital">
+			</div>
+
+			
+		</form>
+		<div class="full-box">
+			<input type="button"  id="btn-submit" value="Registrar" onclick="cadastrarPaciente()">
+		</div>
+
+</body>
+</html>

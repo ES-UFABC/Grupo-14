@@ -20,7 +20,7 @@ function fazPost(url, body) {
     console.log(this.responseText)
   }
   
-  return request.responseText
+  window.location = "FrontTriApp.html"
 }
 
 function cadastrarPaciente(){

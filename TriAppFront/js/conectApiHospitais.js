@@ -19,7 +19,7 @@ function fazPost(url, body){
     console.log(this.responseText)
   }*/
   
-  return request.responseText
+  window.location = "FrontTriApp.html"
 }
 
 
@@ -47,7 +47,6 @@ function cadastrarHospital(){
     if (password.length >= 6){
       data = fazGet(url)
       usuarios = JSON.parse(data)
-      console.log(usuarios)
       var verifica = 0;
       for (var i = 0; i < Object.keys(usuarios).length; i++){
         if( usuarios[i].email == email){

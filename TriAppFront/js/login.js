@@ -19,7 +19,7 @@ function User(){
   for (var i = 0; i < Object.keys(usuarios).length; i++){
     if( usuarios[i].email == email){
       if(usuarios[i].password == password){
-        console.log("usuario cadastrado")
+        window.location = "Area_hospitais.html"
         verifica = 0
       }else{
         alert("Senha incorreta, por favor tente novamente")
@@ -32,18 +32,18 @@ function User(){
     }else{
       data = fazGet(urlPacientes)
       usuarios = JSON.parse(data)
-      var verifica = 0;
+      var verifica = 1;
       for (var i = 0; i < Object.keys(usuarios).length; i++){
         if( usuarios[i].email == email){
           if(usuarios[i].password == password){
-            console.log("usuario cadastrado")
-            verifica = 1
+            window.location = "Triagem.html"
+            verifica = 0
           }else{
             alert("Senha incorreta, por favor tente novamente")
           }
         }
       }
-        if (verifica == 0){
+        if (verifica == 1){
           alert("usuario não cadastrado")
         }
       }
