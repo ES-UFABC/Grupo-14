@@ -1,3 +1,5 @@
+const fs = require('fs')
+
 function fazGet(url){
   let request = new XMLHttpRequest()
   request.open("GET", url, false)
@@ -7,6 +9,8 @@ function fazGet(url){
   }
   return request.responseText
 }
+
+
 
 function User(){
   let urlHospitais = "http://localhost:8080/api/users/hospitais"
@@ -36,7 +40,8 @@ function User(){
       for (var i = 0; i < Object.keys(usuarios).length; i++){
         if( usuarios[i].email == email){
           if(usuarios[i].password == password){
-            window.location = "Triagem.html"
+            const email = usuarios[i].email
+            window.location = "Triagem.html?usuario="+email
             verifica = 0
           }else{
             alert("Senha incorreta, por favor tente novamente")
